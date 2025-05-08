@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>My Travel Photos | My Hugo Site</title>
+	<link rel="canonical" href="http://erlask.xyz/">
+	<link rel='alternate' type='application/rss+xml' title="My Hugo Site RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/styles.css'>
+	<link rel="icon" href="/favicon.svg">
+	<meta name="description" content="AboutMy GithubDonateHomeOk so here is a gallery of some of the places i went to in germany and Poland
+&times;">
+	<meta name="keywords" content="About, Info">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+
+
+<header><h1>My Travel Photos</h1></header>
+
+<div class="top-links">
+    <h2 class="intro"><a href="/about">About</a></a></h1>
+    <h2 class="intro"><a href="https://github.com/gameandwebtester">My Github</a></h1>
+    <h2 class="intro"><a href="/nonposts/donate/">Donate</a></h1>
+    <h2 class="intro"><a href="http://erlask.xyz/">Home</a></h1>
+</div>
+<p>Ok so here is a gallery of some of the places i went to in germany and Poland</p>
+    <div class="gallery">
+        <img src="/img/skylinealt.jpg" alt="warsaw skyline from far away">
+        <img src="/img/skyline.jpg" alt="warsaw skyline">
+        <img src="/img/mi24.jpg" alt="mi 24 gunship">
+        <img src="/img/central.jpg" alt="central">
+        <img src="/img/mig29.jpg" alt="mig 29">
+        <img src="/img/market.jpg" alt="market">
+        <img src="/img/stalker.jpg" alt="stalker">
+        <img src="/img/palace.jpg" alt="palace">
+        <img src="/img/teacup.jpg" alt="teacup">
+        <img src="/img/is3.jpg" alt="is 3">
+        <img src="/img/krakow.jpg" alt="river">
+        <img src="/img/castle.jpg" alt="castle">
+        <img src="/img/mig21.jpg" alt="mig 21">
+        <img src="/img/mig21alt.jpg" alt="mig 21">
+        <img src="/img/mig23.jpg" alt="mig 23">
+        <img src="/img/mi24side.jpg" alt="mi 24 side">
+        <img src="/img/mundsburg.jpg" alt="mundsburg hamburg">
+        <img src="/img/science.jpg" alt="palace of culture and science">
+        <img src="/img/us.jpg" alt="standing in front of mi 24">
+        <img src="/img/view.jpg" alt="view from the apartment in warsaw">
+        <img src="/img/station.jpg" alt="mundsburg station">
+        <img src="/img/berlinhbf.jpg" alt="berlin central station">
+        <img src="/img/meandmig24.jpg" alt="standing in front of a mig 23">
+        <img src="/img/kz.jpg" alt="concentration camp near hamburg"> 
+    </div>
+
+    <div id="myModal" class="modal">
+
+        
+        <span class="close">&times;</span>
+      
+        
+        <img class="modal-content" id="img01">
+      
+        
+        <div id="caption"></div>
+      </div>
+
+      <script>
+        let modal = document.getElementById("myModal");
+
+        
+        let modalImg = document.getElementById("img01");
+        let captionText = document.getElementById("caption");
+
+
+        
+        document.querySelectorAll('.gallery img').forEach(image => {
+            image.onclick = () => {
+                modal.style.display = "block";
+                modalImg.src = image.getAttribute('src');
+                captionText.innerHTML = image.getAttribute('alt');
+            }
+        })
+        
+        
+
+
+        let span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if(event.target == modal) {
+                modal.style.display = 'none'
+            }
+        }
+      </script>
+
+
+
+
+
+<div id="nextprev">
+<a href="/nonposts/donate/"><div id="prevart">Previous:<br>Donate</div></a>
+</div>
+<div style="clear:both" class=taglist><a id="tag_about" href="http://erlask.xyz/tags/about">About</a> &middot; <a id="tag_info" href="http://erlask.xyz/tags/info">Info</a></div>
+</article>
+</main>
+<footer>
+	<a href="http://erlask.xyz/">http://erlask.xyz/</a><br><br>
+	<a href="https://github.com/">github</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>Website by Eric Laskowski</p>
+</footer>
+</body>
+</html>
+

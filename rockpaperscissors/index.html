@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>RPS | My Hugo Site</title>
+	<link rel="canonical" href="http://erlask.xyz/">
+	<link rel='alternate' type='application/rss+xml' title="My Hugo Site RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/styles.css'>
+	<link rel="icon" href="/favicon.svg">
+	<meta name="description" content="AboutMy GithubDonateHomethis is a simple game of rock paper scissors made in js
+This is one of the Rock Paper Scissors games ever madeGet ready for action!RockPaperScissorsreplay">
+	<meta name="keywords" content="About, Info">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+
+
+<header><h1>RPS</h1></header>
+
+<div class="top-links">
+    <h2 class="intro"><a href="/about">About</a></a></h1>
+    <h2 class="intro"><a href="https://github.com/gameandwebtester">My Github</a></h1>
+    <h2 class="intro"><a href="/nonposts/donate/">Donate</a></h1>
+    <h2 class="intro"><a href="http://erlask.xyz/">Home</a></h1>
+</div>
+<p>this is a simple game of rock paper scissors made in js</p>
+<div id="banner">
+    <h2>This is one of the Rock Paper Scissors games ever made</h2>
+    <h2>Get ready for action!</h2>
+</div>
+
+<div id="play-buttons">
+    <button onclick="timeFunction()" id="rock">Rock</button>
+    <button onclick="timeFunction()" id="paper">Paper</button>
+    <button onclick="timeFunction()" id="scissors">Scissors</button>
+</div>
+
+<div id="replay">
+    <button id="rebutton" onclick="replayGame()">replay</button>
+</div>
+
+<div id="scorekeeper">
+    <p class="score"></p>
+    <p class="info"></p>
+    <p class="finalscore"></p>
+</div>
+
+<script>
+    let playerSelection;
+
+const rock = document.getElementById('rock');
+const paper = document.getElementById('paper');
+const scissors = document.getElementById('scissors');
+const replay = document.getElementById('replay');
+
+const playButtons = document.getElementById('play-buttons');
+
+const container = document.querySelector('#scorekeeper');
+const para = document.querySelector('.score');
+const info = document.querySelector('.info')
+const final = document.querySelector('.finalscore');
+
+rock.addEventListener('click', getPlayerChoice);
+paper.addEventListener('click', getPlayerChoicePaper);
+scissors.addEventListener('click', getPlayerChoiceScissors);
+
+
+let choices = ['rock', 'paper', 'scissors']
+let playerScore = 0;
+let computerScore = 0;
+let roundNumber = 0;
+
+replay.style.display = 'none'
+
+function getComputerChoice() {
+    const random = Math.floor(Math.random() * choices.length );
+    return (random, choices[random])
+}
+
+function score() {
+    playerScore +=1
+}
+
+function getPlayerChoicePaper(){
+    playerSelection = 'paper';
+    return playerSelection;
+}
+
+function getPlayerChoice(){
+    playerSelection = 'rock';
+    return playerSelection;
+}
+
+function getPlayerChoiceScissors() {
+    playerSelection = 'scissors';
+    return playerSelection;
+}
+
+function timeFunction() {
+    setTimeout(function(){ playRound(); }, 100)
+}
+
+function playRound(computerSelection) {
+    computerSelection = getComputerChoice();
+    roundNumber ++;
+
+    switch (true) {
+        case playerSelection === computerSelection: 
+        info.textContent = 'you tied with the machine'
+        container.appendChild(info);
+            break;
+        case playerSelection === "rock" && computerSelection == "scissors":
+        case playerSelection === "paper" && computerSelection === "rock":
+        case playerSelection === "scissors" && computerSelection === "paper":
+            score();
+            info.textContent = "you win " + playerSelection + " beats " + computerSelection;
+            container.appendChild(info);
+            break;
+        case playerSelection === undefined:
+            playerScore += 0;
+            computerScore += 0;
+            break;
+        default:
+        computerScore += 1;
+        info.textContent = "you lose " + computerSelection + " beats " + playerSelection;
+        container.appendChild(info);
+        break;
+    }
+    para.textContent = 'The score is: ' + playerScore + ' / ' + computerScore + ' of round ' + roundNumber;
+    container.appendChild(para);
+
+    if(playerScore >= 5 || computerScore >= 5){
+        playButtons.style.display = "none"
+        info.remove();
+        final.textContent = 'GAME OVER! ' + playerScore + " for the player and " +  computerScore + " for the machine is the final score";
+        container.appendChild(final);
+        replay.style.display = "flex"
+    }
+}
+
+function replayGame(){
+    playButtons.style.display = "flex";
+    final.textContent = '';
+    para.textContent = '';
+    roundNumber = 0;
+    playerScore = 0;
+    computerScore = 0;
+    replay.style.display = "none"
+}
+
+</script>
+
+
+
+
+<div id="nextprev">
+<a href="/third/"><div id="prevart">Previous:<br>Filler Content</div></a>
+<a href="/nonposts/donate/"><div id="nextart">Next:<br>Donate</div></a>
+</div>
+<div style="clear:both" class=taglist><a id="tag_about" href="http://erlask.xyz/tags/about">About</a> &middot; <a id="tag_info" href="http://erlask.xyz/tags/info">Info</a></div>
+</article>
+</main>
+<footer>
+	<a href="http://erlask.xyz/">http://erlask.xyz/</a><br><br>
+	<a href="https://github.com/">github</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>Website by Eric Laskowski</p>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,307 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+	<title>My Hugo Site</title>
+	<link>http://erlask.xyz/</link>
+	<description>Recent content in My Webpage on My Hugo Site</description>
+	<generator>Hugo -- gohugo.io</generator>
+	<language>en-us</language>
+	<lastBuildDate>Sat, 09 Sep 2023 23:41:04 -0400</lastBuildDate>
+    
+        <atom:link href="http://erlask.xyz/index.xml" rel="self" type="application/rss+xml" />
+	
+	
+	<item>
+		<title>My Travel Photos</title>
+		<link>http://erlask.xyz/travelphotos/</link>
+		<pubDate>Sat, 09 Sep 2023 23:41:04 -0400</pubDate>
+		
+		<guid>http://erlask.xyz/travelphotos/</guid>
+		<description>&lt;div class=&#34;top-links&#34;&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/about&#34;&gt;About&lt;/a&gt;&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;https://github.com/gameandwebtester&#34;&gt;My Github&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/nonposts/donate/&#34;&gt;Donate&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/&#34;&gt;Home&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+&lt;p&gt;Ok so here is a gallery of some of the places i went to in germany and Poland&lt;/p&gt;
+    &lt;div class=&#34;gallery&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/skylinealt.jpg&#34; alt=&#34;warsaw skyline from far away&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/skyline.jpg&#34; alt=&#34;warsaw skyline&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/mi24.jpg&#34; alt=&#34;mi 24 gunship&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/central.jpg&#34; alt=&#34;central&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/mig29.jpg&#34; alt=&#34;mig 29&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/market.jpg&#34; alt=&#34;market&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/stalker.jpg&#34; alt=&#34;stalker&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/palace.jpg&#34; alt=&#34;palace&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/teacup.jpg&#34; alt=&#34;teacup&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/is3.jpg&#34; alt=&#34;is 3&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/krakow.jpg&#34; alt=&#34;river&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/castle.jpg&#34; alt=&#34;castle&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/mig21.jpg&#34; alt=&#34;mig 21&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/mig21alt.jpg&#34; alt=&#34;mig 21&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/mig23.jpg&#34; alt=&#34;mig 23&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/mi24side.jpg&#34; alt=&#34;mi 24 side&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/mundsburg.jpg&#34; alt=&#34;mundsburg hamburg&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/science.jpg&#34; alt=&#34;palace of culture and science&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/us.jpg&#34; alt=&#34;standing in front of mi 24&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/view.jpg&#34; alt=&#34;view from the apartment in warsaw&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/station.jpg&#34; alt=&#34;mundsburg station&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/berlinhbf.jpg&#34; alt=&#34;berlin central station&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/meandmig24.jpg&#34; alt=&#34;standing in front of a mig 23&#34;&gt;
+        &lt;img src=&#34;http://erlask.xyz/img/kz.jpg&#34; alt=&#34;concentration camp near hamburg&#34;&gt; 
+    &lt;/div&gt;
+
+    &lt;div id=&#34;myModal&#34; class=&#34;modal&#34;&gt;
+
+        
+        &lt;span class=&#34;close&#34;&gt;&amp;times;&lt;/span&gt;
+      
+        
+        &lt;img class=&#34;modal-content&#34; id=&#34;img01&#34;&gt;
+      
+        
+        &lt;div id=&#34;caption&#34;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;script&gt;
+        let modal = document.getElementById(&#34;myModal&#34;);
+
+        
+        let modalImg = document.getElementById(&#34;img01&#34;);
+        let captionText = document.getElementById(&#34;caption&#34;);
+
+
+        
+        document.querySelectorAll(&#39;.gallery img&#39;).forEach(image =&gt; {
+            image.onclick = () =&gt; {
+                modal.style.display = &#34;block&#34;;
+                modalImg.src = image.getAttribute(&#39;src&#39;);
+                captionText.innerHTML = image.getAttribute(&#39;alt&#39;);
+            }
+        })
+        
+        
+
+
+        let span = document.getElementsByClassName(&#34;close&#34;)[0];
+
+        span.onclick = function() {
+            modal.style.display = &#34;none&#34;;
+        }
+
+        window.onclick = function(event) {
+            if(event.target == modal) {
+                modal.style.display = &#39;none&#39;
+            }
+        }
+      &lt;/script&gt;
+
+</description>
+	</item>
+	
+	<item>
+		<title>Nonposts</title>
+		<link>http://erlask.xyz/nonposts/</link>
+		<pubDate>Thu, 15 Dec 2022 21:18:46 -0500</pubDate>
+		
+		<guid>http://erlask.xyz/nonposts/</guid>
+		<description></description>
+	</item>
+	
+	<item>
+		<title>RPS</title>
+		<link>http://erlask.xyz/rockpaperscissors/</link>
+		<pubDate>Thu, 15 Dec 2022 20:54:06 -0500</pubDate>
+		
+		<guid>http://erlask.xyz/rockpaperscissors/</guid>
+		<description>&lt;div class=&#34;top-links&#34;&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/about&#34;&gt;About&lt;/a&gt;&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;https://github.com/gameandwebtester&#34;&gt;My Github&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/nonposts/donate/&#34;&gt;Donate&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/&#34;&gt;Home&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+&lt;p&gt;this is a simple game of rock paper scissors made in js&lt;/p&gt;
+&lt;div id=&#34;banner&#34;&gt;
+    &lt;h2&gt;This is one of the Rock Paper Scissors games ever made&lt;/h2&gt;
+    &lt;h2&gt;Get ready for action!&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;play-buttons&#34;&gt;
+    &lt;button onclick=&#34;timeFunction()&#34; id=&#34;rock&#34;&gt;Rock&lt;/button&gt;
+    &lt;button onclick=&#34;timeFunction()&#34; id=&#34;paper&#34;&gt;Paper&lt;/button&gt;
+    &lt;button onclick=&#34;timeFunction()&#34; id=&#34;scissors&#34;&gt;Scissors&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;replay&#34;&gt;
+    &lt;button id=&#34;rebutton&#34; onclick=&#34;replayGame()&#34;&gt;replay&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;scorekeeper&#34;&gt;
+    &lt;p class=&#34;score&#34;&gt;&lt;/p&gt;
+    &lt;p class=&#34;info&#34;&gt;&lt;/p&gt;
+    &lt;p class=&#34;finalscore&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    let playerSelection;
+
+const rock = document.getElementById(&#39;rock&#39;);
+const paper = document.getElementById(&#39;paper&#39;);
+const scissors = document.getElementById(&#39;scissors&#39;);
+const replay = document.getElementById(&#39;replay&#39;);
+
+const playButtons = document.getElementById(&#39;play-buttons&#39;);
+
+const container = document.querySelector(&#39;#scorekeeper&#39;);
+const para = document.querySelector(&#39;.score&#39;);
+const info = document.querySelector(&#39;.info&#39;)
+const final = document.querySelector(&#39;.finalscore&#39;);
+
+rock.addEventListener(&#39;click&#39;, getPlayerChoice);
+paper.addEventListener(&#39;click&#39;, getPlayerChoicePaper);
+scissors.addEventListener(&#39;click&#39;, getPlayerChoiceScissors);
+
+
+let choices = [&#39;rock&#39;, &#39;paper&#39;, &#39;scissors&#39;]
+let playerScore = 0;
+let computerScore = 0;
+let roundNumber = 0;
+
+replay.style.display = &#39;none&#39;
+
+function getComputerChoice() {
+    const random = Math.floor(Math.random() * choices.length );
+    return (random, choices[random])
+}
+
+function score() {
+    playerScore +=1
+}
+
+function getPlayerChoicePaper(){
+    playerSelection = &#39;paper&#39;;
+    return playerSelection;
+}
+
+function getPlayerChoice(){
+    playerSelection = &#39;rock&#39;;
+    return playerSelection;
+}
+
+function getPlayerChoiceScissors() {
+    playerSelection = &#39;scissors&#39;;
+    return playerSelection;
+}
+
+function timeFunction() {
+    setTimeout(function(){ playRound(); }, 100)
+}
+
+function playRound(computerSelection) {
+    computerSelection = getComputerChoice();
+    roundNumber ++;
+
+    switch (true) {
+        case playerSelection === computerSelection: 
+        info.textContent = &#39;you tied with the machine&#39;
+        container.appendChild(info);
+            break;
+        case playerSelection === &#34;rock&#34; &amp;&amp; computerSelection == &#34;scissors&#34;:
+        case playerSelection === &#34;paper&#34; &amp;&amp; computerSelection === &#34;rock&#34;:
+        case playerSelection === &#34;scissors&#34; &amp;&amp; computerSelection === &#34;paper&#34;:
+            score();
+            info.textContent = &#34;you win &#34; + playerSelection + &#34; beats &#34; + computerSelection;
+            container.appendChild(info);
+            break;
+        case playerSelection === undefined:
+            playerScore += 0;
+            computerScore += 0;
+            break;
+        default:
+        computerScore += 1;
+        info.textContent = &#34;you lose &#34; + computerSelection + &#34; beats &#34; + playerSelection;
+        container.appendChild(info);
+        break;
+    }
+    para.textContent = &#39;The score is: &#39; + playerScore + &#39; / &#39; + computerScore + &#39; of round &#39; + roundNumber;
+    container.appendChild(para);
+
+    if(playerScore &gt;= 5 || computerScore &gt;= 5){
+        playButtons.style.display = &#34;none&#34;
+        info.remove();
+        final.textContent = &#39;GAME OVER! &#39; + playerScore + &#34; for the player and &#34; +  computerScore + &#34; for the machine is the final score&#34;;
+        container.appendChild(final);
+        replay.style.display = &#34;flex&#34;
+    }
+}
+
+function replayGame(){
+    playButtons.style.display = &#34;flex&#34;;
+    final.textContent = &#39;&#39;;
+    para.textContent = &#39;&#39;;
+    roundNumber = 0;
+    playerScore = 0;
+    computerScore = 0;
+    replay.style.display = &#34;none&#34;
+}
+
+&lt;/script&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Filler Content</title>
+		<link>http://erlask.xyz/third/</link>
+		<pubDate>Tue, 19 Jul 2022 04:05:21 -0400</pubDate>
+		
+		<guid>http://erlask.xyz/third/</guid>
+		<description>&lt;div class=&#34;top-links&#34;&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/about&#34;&gt;About&lt;/a&gt;&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;https://github.com/gameandwebtester&#34;&gt;My Github&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/nonposts/donate/&#34;&gt;Donate&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/&#34;&gt;Home&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+&lt;p&gt;here is some content for you to test&lt;/p&gt;
+&lt;p&gt;See my &lt;a href=&#34;http://erlask.xyz/about&#34;&gt;about page&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;further more, here is a link to the &lt;a href=&#34;https://old.reddit.com/r/okbuddyretard/&#34;&gt;subreddit&lt;/a&gt; to see very funny things&lt;/p&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>Pics</title>
+		<link>http://erlask.xyz/second/</link>
+		<pubDate>Tue, 19 Jul 2022 03:58:29 -0400</pubDate>
+		
+		<guid>http://erlask.xyz/second/</guid>
+		<description>&lt;div class=&#34;top-links&#34;&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/about&#34;&gt;About&lt;/a&gt;&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;https://github.com/gameandwebtester&#34;&gt;My Github&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/nonposts/donate/&#34;&gt;Donate&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/&#34;&gt;Home&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;figure &gt;&lt;img src=&#34;http://erlask.xyz/img/face.jpg&#34; title=&#34;swag&#34;&gt;&lt;/figure&gt;
+
+</description>
+	</item>
+	
+	<item>
+		<title>About</title>
+		<link>http://erlask.xyz/about/</link>
+		<pubDate>Tue, 19 Jul 2022 03:48:31 -0400</pubDate>
+		
+		<guid>http://erlask.xyz/about/</guid>
+		<description>&lt;div class=&#34;top-links&#34;&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/about&#34;&gt;About&lt;/a&gt;&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;https://github.com/gameandwebtester&#34;&gt;My Github&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/nonposts/donate/&#34;&gt;Donate&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/&#34;&gt;Home&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+&lt;p&gt;Testing the new content&lt;/p&gt;
+
+&lt;figure &gt;&lt;img src=&#34;http://erlask.xyz/img/creeper.jpg&#34; title=&#34;this is a test ok&#34;&gt;&lt;figcaption&gt;this is me &lt;/figcaption&gt;&lt;/figure&gt;
+
+</description>
+	</item>
+	
+	</channel>
+</rss>

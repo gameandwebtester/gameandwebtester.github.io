@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.117.0">
+	<title>My Hugo Site</title>
+	<link rel="canonical" href="http://erlask.xyz/">
+	<link rel='alternate' type='application/rss+xml' title="My Hugo Site RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/styles.css'>
+	<link rel="icon" href="/favicon.svg">
+	<meta name="description" content="AboutMy GithubDonateHomeIntroduction This is a simple website that i made to learn web devolopment/programming.
+What do you want to read about? BackspaceRecent Posts My Travel Photos RPS Filler Content Pics About Or Browse by Category&hellip; AboutInfoSimpleTest">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1>My Webpage</h1></header>
+<article>
+<div class="top-links">
+    <h2 class="intro"><a href="/about">About</a></a></h1>
+    <h2 class="intro"><a href="https://github.com/gameandwebtester">My Github</a></h1>
+    <h2 class="intro"><a href="/nonposts/donate/">Donate</a></h1>
+    <h2 class="intro"><a href="http://erlask.xyz/">Home</a></h1>
+</div>
+<h2 id="introduction">Introduction</h2>
+<p>This is a simple website that i made to learn web devolopment/programming.</p>
+<h2 id="what-do-you-want-to-read-about">What do you want to read about?</h2>
+<div class="search js-only">
+  <input type="text" id="search" placeholder="Search For any Article...">
+  <button id="clear-search">
+    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Backspace</title><path d="M135.19 390.14a28.79 28.79 0 0021.68 9.86h246.26A29 29 0 00432 371.13V140.87A29 29 0 00403.13 112H156.87a28.84 28.84 0 00-21.67 9.84v0L46.33 256l88.86 134.11z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"></path><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M336.67 192.33L206.66 322.34M336.67 322.34L206.66 192.33M336.67 192.33L206.66 322.34M336.67 322.34L206.66 192.33"></path></svg>
+  </button>
+</div>
+
+   <script>
+
+
+   document.addEventListener("DOMContentLoaded", () => {
+     for (e of document.getElementsByClassName("js-only")) {
+          e.classList.remove("js-only");
+     }
+
+     const recipes = document.querySelectorAll("#artlist li")
+     const search = document.getElementById("search");
+     const oldheading = document.getElementById("recent-posts");
+     const clearSearch = document.getElementById("clear-search");
+     const artlist = document.getElementById("artlist");
+
+     search.addEventListener("input", () => {
+          
+    const searchText = search.value.toLowerCase().trim().normalize('NFD').replace(/\p{Diacritic}/gu, "");
+    const searchTerms = searchText.split(" ");
+    const hasFilter = searchText.length > 0;
+
+    artlist.classList.toggle("list-searched", hasFilter);
+    oldheading.classList.toggle("hidden", hasFilter);
+
+    
+    recipes.forEach(recipe => {
+      const searchString = `${recipe.textContent} ${recipe.dataset.tags}`.
+      toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "");
+      const isMatch = searchTerms.every(term => searchString.includes(term));
+
+      recipe.hidden = !isMatch;
+      recipe.classList.toggle("matched-recipe", hasFilter && isMatch);
+       })
+     })
+
+     clearSearch.addEventListener("click", () => {
+    search.value = "";
+    recipes.forEach(recipe => {
+      recipe.hidden = false;
+      recipe.classList.remove("matched-recipe");
+    })
+
+    artlist.classList.remove("list-searched");
+    oldheading.classList.remove("hidden");
+       })
+     })
+      </script>
+
+      
+
+<h2 id="recent-posts">Recent Posts</h2>
+<div id=artlist>
+    <ul >
+        <li data-tags="[About Info]" ><a href="http://erlask.xyz/travelphotos/">My Travel Photos</a></li>
+        <li data-tags="[About Info]" ><a href="http://erlask.xyz/rockpaperscissors/">RPS</a></li>
+        <li data-tags="[Test Simple]" ><a href="http://erlask.xyz/third/">Filler Content</a></li>
+        <li data-tags="[Test]" ><a href="http://erlask.xyz/second/">Pics</a></li>
+        <li data-tags="[About Info]" ><a href="http://erlask.xyz/about/">About</a></li>
+        </ul>
+</div>
+
+
+<h2 id="or-browse-by-category">Or Browse by Category&hellip;</h2>
+   <ul id="tagcloud">
+    <li><a href="http://erlask.xyz/tags/about" id="tag_about">About</a></li>
+    <li><a href="http://erlask.xyz/tags/info" id="tag_info">Info</a></li>
+    <li><a href="http://erlask.xyz/tags/simple" id="tag_simple">Simple</a></li>
+    <li><a href="http://erlask.xyz/tags/test" id="tag_test">Test</a></li>
+    </ul>
+
+
+</article>
+
+</article>
+</main>
+<footer>
+	<a href="http://erlask.xyz/">http://erlask.xyz/</a><br><br>
+	<a href="https://github.com/">github</a><br><br>
+	<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<p>Website by Eric Laskowski</p>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+	<title>My Hugo Site</title>
+	<link>http://erlask.xyz/tags/simple/</link>
+	<description>Recent content in Simple on My Hugo Site</description>
+	<generator>Hugo -- gohugo.io</generator>
+	<language>en-us</language>
+	<lastBuildDate>Tue, 19 Jul 2022 04:05:21 -0400</lastBuildDate>
+    
+        <atom:link href="http://erlask.xyz/tags/simple/index.xml" rel="self" type="application/rss+xml" />
+	
+	
+	<item>
+		<title>Filler Content</title>
+		<link>http://erlask.xyz/third/</link>
+		<pubDate>Tue, 19 Jul 2022 04:05:21 -0400</pubDate>
+		
+		<guid>http://erlask.xyz/third/</guid>
+		<description>&lt;div class=&#34;top-links&#34;&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/about&#34;&gt;About&lt;/a&gt;&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;https://github.com/gameandwebtester&#34;&gt;My Github&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/nonposts/donate/&#34;&gt;Donate&lt;/a&gt;&lt;/h1&gt;
+    &lt;h2 class=&#34;intro&#34;&gt;&lt;a href=&#34;http://erlask.xyz/&#34;&gt;Home&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+&lt;p&gt;here is some content for you to test&lt;/p&gt;
+&lt;p&gt;See my &lt;a href=&#34;http://erlask.xyz/about&#34;&gt;about page&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;further more, here is a link to the &lt;a href=&#34;https://old.reddit.com/r/okbuddyretard/&#34;&gt;subreddit&lt;/a&gt; to see very funny things&lt;/p&gt;
+</description>
+	</item>
+	
+	</channel>
+</rss>
